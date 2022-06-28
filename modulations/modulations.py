@@ -17,6 +17,7 @@ w_c = 2
 # fm sensitivity
 k_f = 2
 
+color = '#54626F'
 
 t = np.linspace(0, n_t * 2*np.pi, num=n_t*100)
 
@@ -29,12 +30,12 @@ pm = A_c * np.cos(w_c * t + m)
 
 fig, ax = plt.subplots(4,1)
 
-line_m, = ax[0].plot(t, m)
-line_am, = ax[1].plot(t, am)
+line_m, = ax[0].plot(t, m, c=color)
+line_am, = ax[1].plot(t, am, c=color)
 line_am_mh, = ax[1].plot(t, m + A_c, '--k')
 line_am_ml, = ax[1].plot(t, -m - A_c, '--k')
-line_fm, = ax[2].plot(t, fm)
-line_pm, = ax[3].plot(t, pm)
+line_fm, = ax[2].plot(t, fm, c=color)
+line_pm, = ax[3].plot(t, pm, c=color)
 
 ax[0].set_axis_off()
 ax[1].set_axis_off()
@@ -72,7 +73,6 @@ animation = FuncAnimation(fig, update,
                           interval=100,
                           )
 
-# animation.save('modulations.gif', writer='imagemagick')
+animation.save('modulations.gif', writer='imagemagick')
 
-fig.title('Signal modulations')
-plt.show()
+#plt.show()

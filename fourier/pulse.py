@@ -7,6 +7,8 @@ T = 5 * np.pi
 Tp = 3 * T / 4
 A = 1
 f0 = 1 / T
+
+color = '#36454F'
 ###
 
 
@@ -25,7 +27,7 @@ lines = []
 for n in range(1, 101):
     harmonic = a_n(n) * np.cos(n * 2 * np.pi * f0 * x)
     y += harmonic
-    line, = ax.plot(x, y, 'teal')
+    line, = ax.plot(x, y, c=color)
     title = ax.text(.5, 1.19, f'n harmonics={n}', ha='center')
     lines.append([line, title])
 

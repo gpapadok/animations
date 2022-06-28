@@ -3,7 +3,11 @@ from matplotlib.animation import FuncAnimation
 import numpy as np
 
 
-# np.random.seed(7096)
+# np.random.seed(9999)
+pivot_col = '#E30022' # red
+curr_col = '#006B3C' # green
+part_col = '#2A52BE' # gray
+other_col = '#91A3B0' # blue
 
 
 class quicksort_gen:
@@ -88,13 +92,13 @@ def animate(state):
 
         # update colors
         if k == pivot:
-            rec.set_color('r')
+            rec.set_color(pivot_col)
         elif k == curr:
-            rec.set_color('g')
+            rec.set_color(curr_col)
         elif k >= lo and k < hi:
-            rec.set_color('gray')
+            rec.set_color(part_col)
         else:
-            rec.set_color('b')
+            rec.set_color(other_col)
 
     return bars,
 

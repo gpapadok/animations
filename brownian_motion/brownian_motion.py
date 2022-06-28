@@ -9,6 +9,7 @@ n_points = 500
 size = 400
 delta = 5
 dt = .8
+color = "#7CB9E8"
 ##
 
 x = np.zeros(n_points)
@@ -16,7 +17,7 @@ y = np.zeros(n_points)
 
 fig, ax = plt.subplots()
 
-points, = ax.plot(x, y, 'o', c="#1374ff")
+points, = ax.plot(x, y, 'o', c=color)
 
 
 def init_motion():
