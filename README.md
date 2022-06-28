@@ -15,8 +15,7 @@ Inspired from math, science, algorithms and others.
 ### Quicksort
 ![](quicksort/quicksort.gif)
 
-## Fractals
-### Mandelbrot and Julia sets
+### Fractals: Mandelbrot and Julia sets
 ![](fractals/mandelbrot_set.gif)
 ![](fractals/julia_set.gif)
 
