@@ -1,2 +1,2 @@
-### Brownian motion
+## Brownian motion
 ![](brownian_motion.gif)
